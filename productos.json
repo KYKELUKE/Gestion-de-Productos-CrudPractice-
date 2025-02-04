@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laptop ASUS X515",
+    "cantidad": 20,
+    "categoria": "Electrónica",
+    "fecha": "2025-01-15",
+    "precio": 950.0
+  },
+  {
+    "id": 2,
+    "nombre": "Teclado Mecánico RGB",
+    "cantidad": 50,
+    "categoria": "Accesorios",
+    "fecha": "2025-01-18",
+    "precio": 120.0
+  },
+  {
+    "id": 3,
+    "nombre": "Auriculares Sony WH-1000XM4",
+    "cantidad": 15,
+    "categoria": "Audio",
+    "fecha": "2025-01-20",
+    "precio": 300.0
+  },
+  {
+    "id": 4,
+    "nombre": "Mouse Logitech G502",
+    "cantidad": 35,
+    "categoria": "Accesorios",
+    "fecha": "2025-01-22",
+    "precio": 75.0
+  },
+  {
+    "id": 5,
+    "nombre": "Smartphone Samsung Galaxy S23",
+    "cantidad": 10,
+    "categoria": "Electrónica",
+    "fecha": "2025-01-25",
+    "precio": 1200.0
+  }
+]

@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+#contenedor {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+#logo {
+  width: 15%;
+  text-align: center;
+  background-color: #fff;
+  color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.9rem;
+
+  h2 {
+    font-weight: lighter;
+  }
+}
+
+#logo img {
+  width: 150px;
+  height: auto;
+  margin-top: -70vh;
+}
+
+#contenedor-formulario {
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 50px;
+    font-weight: lighter;
+  }
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#formulario {
+  width: 80%;
+  max-width: 500px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-size: 19px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+input,
+select {
+  background-color: #3333331a;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#botones {
+  display: flex;
+  gap: 20vh;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+#botones button {
+  padding: 20px 40px;
+  font-size: 21px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#botones button[id="agregarProducto"] {
+  background-color: #007bff;
+}
+
+#botones button[id="agregarProducto"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#listaproductos {
+  background-color: #67d742;
+}
+
+#listaproductos:hover {
+  background-color: #2bb14a;
+  transform: scale(1.05);
+}
+
+#botones button[type="reset"] {
+  background-color: #6c757d;
+}
+
+#botones button[type="reset"]:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+.tabla {
+  width: 130vh;
+  height: 10vh;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fdfdfd;
+}
+
+.tabla thead tr {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+}
+
+.tabla th,
+.tabla td {
+  padding: 15px;
+  text-align: center;
+}
+
+.tabla tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.btn-eliminar {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #e60000;
+}
+
+.modal-contenido {
+  max-width: 90%;
+  width: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  width: 80%;
+  height: auto;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-confirmation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.btn-aceptar,
+.btn-cancelar {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background-color: #dc3545;
+}
+
+.btn-aceptar:hover,
+.btn-cancelar:hover {
+  opacity: 0.8;
+}

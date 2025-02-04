@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gestor de productos para administrar inventarios de manera eficiente." />
+    <title>Gestor de Productos</title>
+    <link rel="stylesheet" href="./css/form.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div id="contenedor">
+      <div id="logo">
+        <img src="./img/logo.png" alt="Logo de ISMAEL SUAREZ" />
+        <h2>ISMAEL SUAREZ</h2>
+      </div>
+
+      <div id="contenedor-formulario">
+        <h1>Gestión de Productos</h1>
+        <form id="formulario" action="#">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Escribe el nombre del producto"
+              required />
+          </div>
+
+          <div class="form-group">
+            <label for="cantidad">Cantidad:</label>
+            <input
+              type="number"
+              id="cantidad"
+              name="cantidad"
+              placeholder="Cantidad del producto"
+              min="1"
+              required />
+          </div>
+
+          <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria">
+              <option value="electronica">Electrónica</option>
+              <option value="ropa">Ropa</option>
+              <option value="alimentos">Alimentos</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required />
+          </div>
+
+          <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input
+              type="number"
+              id="precio"
+              name="precio"
+              placeholder="Precio del producto"
+              step="0.01"
+              min="0"
+              required />
+          </div>
+        </form>
+        <div id="botones">
+          <button type="button" id="agregarProducto">Agregar</button>
+          <button id="listaproductos" class="btn btn-primary">
+            Listado de Productos
+          </button>
+          <button type="reset">Limpiar</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modalConfirmacion"
+      class="modal-confirmation"
+      style="display: none">
+      <div class="modal-content">
+        <h2>¿Deseas actualizar este producto?</h2>
+        <p id="productoDetalles"></p>
+        <button id="btnAceptar" class="btn-aceptar">Aceptar</button>
+        <button id="btnCancelar" class="btn-cancelar">Cancelar</button>
+      </div>
+    </div>
+
+    <div id="modal" class="modal" style="display: none">
+      <div class="modal-contenido">
+        <button id="cerrarModal" class="btn-cerrar">⬅</button>
+        <h2 class="lista" style="text-align: center" ;>Listado de Productos</h2>
+        <table id="tablaProductos" class="tabla">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Cantidad</th>
+              <th>Categoría</th>
+              <th>Fecha de Ingreso</th>
+              <th>Precio</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
